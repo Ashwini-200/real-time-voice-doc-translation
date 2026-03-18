@@ -38,6 +38,16 @@ real_time_voice_translator/
 ## Installation & Execution (Windows CMD)
 
 Run the following commands step-by-step:
+python -m venv venv
+venv\Scripts\activate
+
+python -m pip install langdetect
+
+
+pip install -r requirements.txt
+
+
+streamlit run app.py
 
 
 ---
