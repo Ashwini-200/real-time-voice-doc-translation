@@ -4,71 +4,106 @@ Real-Time Voice and Document Translation
 
 # Real-Time Voice and Document Translation
 
-This project is a **real-time voice and document translation application** that can handle:  
+This project is a **real-time voice and document translation application** that supports:
 
-1. **Real-time spoken audio** – Translate while you speak.  
-2. **Recorded audio files** – Upload audio files for translation.  
-3. **Document files** – Upload text documents to translate their content.  
+- 🎤 Real-time speech translation  
+- 🔊 Recorded audio file translation  
+- 📄 Document translation (PDF, DOCX, TXT)  
 
-Supports multiple Indian languages (Kannada, Tamil, Telugu, Hindi) and English.
+It supports multiple languages including **Kannada, Tamil, Telugu, Hindi, and English**.
 
 ---
 
 ## Features
 
-- Record live audio and translate instantly.  
-- Upload recorded audio files for translation.  
-- Upload text documents (PDF, TXT, DOCX) and translate their content.  
-- Detect language automatically.  
-- Convert translated text into speech using gTTS.  
-- Simple interactive interface with Streamlit.  
+- Real-time voice input and translation  
+- Upload and translate recorded audio files  
+- Upload and translate documents (PDF, DOCX, TXT)  
+- Automatic language detection using `langdetect`  
+- Text-to-speech output using `gTTS`  
+- Simple UI using Streamlit  
 
 ---
 
-## Installation
+## Project Structure
+real_time_voice_translator/
+│
+├── app.py # Main Streamlit app
+├── voice_engine.py # Audio + document processing + translation logic
+├── requirements.txt # Dependencies
+├── README.md
 
-1. **Clone the repository**  
+---
 
-On Windows:
-venv\Scripts\activate
+## Installation & Execution (Windows CMD)
 
-On macOS/Linux:
-source venv/bin/activate
+Run the following commands step-by-step:
 
-Install dependencies
-python -m pip install --upgrade pip
-python -m pip install langdetect
-pip install -r requirements.txt
 
-Usage
+---
 
-Run the application using Streamlit:
-streamlit run app.py
+## Requirements
 
-Once the app opens in your browser, you can:
+Make sure your `requirements.txt` contains:
 
-Speak in real-time – Translate and listen to your speech.
+streamlit>=1.20.0
+gTTS>=2.2.3
+googletrans==4.0.0-rc1
+speechrecognition>=3.8.1
+pyaudio>=0.2.11
+langdetect>=1.0.9
 
-Upload an audio file – Get translation and speech output.
 
-Upload a document – Translate its text and listen to the result.
+---
 
-Code Overview
+## Additional Setup
 
-app.py – Main Streamlit application. Handles UI, input selection, audio recording, document parsing, translation, and speech output.
+### FFmpeg (Required for Audio Processing)
 
-requirements.txt – Contains all Python libraries required for the project.
+Install FFmpeg and add it to system PATH.
 
-langdetect – Detects the language of the input automatically.
+Check installation:
 
-gTTS – Converts translated text into audio output.
+---
 
-Document processing modules – Extract text from PDFs, DOCX, and TXT files for translation.
+## Usage
 
-Contribution
+After running:
 
-Contributions and improvements are welcome! Open issues or pull requests for new features.
+Open browser:
 
-License
+- Local URL: http://localhost:8503  
+
+---
+
+## How It Works
+
+1. User selects input type:
+   - Real-time voice  
+   - Audio file  
+   - Document  
+
+2. Input is processed in `voice_engine.py`:
+   - Audio → Speech Recognition  
+   - Document → Text Extraction  
+
+3. Language is detected using `langdetect`  
+
+4. Text is translated using `googletrans`  
+
+5. Output is converted to speech using `gTTS`  
+
+---
+
+## Contribution
+
+Feel free to contribute by:
+- Adding more languages  
+- Improving UI  
+- Enhancing translation accuracy  
+
+---
+
+## License
 
 This project is licensed under the MIT License.
