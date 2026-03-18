@@ -56,6 +56,7 @@ streamlit run app.py
 
 Make sure your `requirements.txt` contains:
 
+
 streamlit>=1.20.0
 gTTS>=2.2.3
 googletrans==4.0.0-rc1
