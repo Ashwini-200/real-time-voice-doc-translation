@@ -2,39 +2,32 @@
 Real-time Voice and Document Translation project in Python. Converts spoken input into selected languages and translates text documents. Uses Google Speech Recognition, Google Translate API, and gTTS for voice output, enabling multilingual communication and learning.
 Real-Time Voice and Document Translation
 
-This project is a real-time voice and document translation application that can handle:
+# Real-Time Voice and Document Translation
 
-Real-time spoken audio – Translate while you speak.
+This project is a **real-time voice and document translation application** that can handle:  
 
-Recorded audio files – Upload audio files for translation.
-
-Document files – Upload text documents to translate their content.
+1. **Real-time spoken audio** – Translate while you speak.  
+2. **Recorded audio files** – Upload audio files for translation.  
+3. **Document files** – Upload text documents to translate their content.  
 
 Supports multiple Indian languages (Kannada, Tamil, Telugu, Hindi) and English.
 
-Features
+---
 
-Record live audio and translate instantly.
+## Features
 
-Upload recorded audio files for translation.
+- Record live audio and translate instantly.  
+- Upload recorded audio files for translation.  
+- Upload text documents (PDF, TXT, DOCX) and translate their content.  
+- Detect language automatically.  
+- Convert translated text into speech using gTTS.  
+- Simple interactive interface with Streamlit.  
 
-Upload text documents (PDF, TXT, DOCX) and translate their content.
+---
 
-Detect language automatically.
+## Installation
 
-Convert translated text into speech using gTTS.
-
-Simple interactive interface with Streamlit.
-Installation
-
-Clone the repository
-git clone <repository-url>
-cd <repository-folder>
-
-Create a virtual environment
-python -m venv venv
-
-Activate the virtual environment
+1. **Clone the repository**  
 
 On Windows:
 venv\Scripts\activate
